@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="vehiclestyle.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <title>Vehicle Category</title>
+</head>
+<body>
+    <section class="vehicle-category">
+        <div class="top">
+            <h1>Vehicle Categories</h1>
+        </div>
+    
+        <div class="add-vehicle">
+            <h2>Add New Vehicle</h2>
+            <form id="addVehicleForm">
+                <label for="vehicleType">Vehicle Type:</label>
+                <select id="vehicleType" name="vehicleType">
+                    <option value="two-wheeler">Two Wheeler</option>
+                    <option value="four-wheeler">Four Wheeler</option>
+                </select>
+
+                <label for="LicencePlate">Licence Plate:</label>
+                <input type="text" id="LicencePlate" name="LicencePlate" required>
+
+                <button type="button" onclick="addVehicle()">Add Vehicle</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        function addVehicle() {
+            // Show confirmation message
+            alert("Vehicle added successfully!");
+            // Reload the same page
+            location.reload();
+        }
+    </script>
+</body>
+</html>

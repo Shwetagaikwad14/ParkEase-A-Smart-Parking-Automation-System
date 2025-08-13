@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Background styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #6C63FF, #3A3B98);
+            color: #333;
+        }
+
+        /* Container for logout box */
+        .logout-container {
+            background: #fff;
+            padding: 2rem;
+            width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        /* Title styling */
+        h2 {
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        /* Button styling */
+        .logout-buttons {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 1.5rem;
+        }
+
+        /* Confirm and cancel button styling */
+        .confirm-btn, .cancel-btn {
+            padding: 0.6rem 1.2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .confirm-btn {
+            background-color: #6C63FF;
+            color: #fff;
+        }
+
+        .confirm-btn:hover {
+            background-color: #5347D6;
+        }
+
+        .cancel-btn {
+            background-color: #e0e0e0;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .cancel-btn:hover {
+            background-color: #c7c7c7;
+        }
+
+        /* Animation for fade-in effect */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="logout-container">
+        <h2>Are you sure you want to log out?</h2>
+        <div class="logout-buttons">
+            <form action="logout.php" method="post">
+                <button type="submit" class="confirm-btn">Yes, Log Out</button>
+            </form>
+            <a href="admindashboard.html" class="cancel-btn">Cancel</a>
+        </div>
+    </div>
+</body>
+</html>

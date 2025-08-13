@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Area Form</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+        }
+        .form-container {
+            width: 90%;
+            max-width: 500px;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h1>Parking Area Form</h1>
+    <form action="" method="POST">
+        <!-- Parking Name -->
+        <div class="form-group">
+            <label for="parking_name">Parking Name</label>
+            <input type="text" id="parking_name" name="parking_name" placeholder="Enter parking name" required>
+        </div>
+
+        <!-- Parking Capacity -->
+        <div class="form-group">
+            <label for="parking_capacity">Parking Capacity</label>
+            <input type="number" id="parking_capacity" name="parking_capacity" placeholder="Enter parking capacity" required>
+        </div>
+
+        <div class="form-group">
+            <label for="Two-wheeler">Two-wheeler</label>
+            <input type="number" id="Two-wheeler" name="Two_wheeler" placeholder="Enter two-wheeler capacity" required>
+        </div>
+
+        <div class="form-group">
+            <label for="four-wheeler">Four-wheeler</label>
+            <input type="number" id="Four_wheeler" name="Four_wheeler" placeholder="Enter four-wheeler capacity" required>
+        </div>
+
+        <!-- Parking Location -->
+        <div class="form-group">
+            <label for="parking_location">Parking Location</label>
+            <input type="text" id="parking_location" name="parking_location" placeholder="Enter parking location" required>
+        </div>
+
+        <!-- Parking Status -->
+        <div class="form-group">
+            <label for="parking_status">Parking Status</label>
+            <select id="parking_status" name="parking_status" required>
+                <option value="" disabled selected>Select status</option>
+                <option value="open">Open</option>
+                <option value="closed">Closed</option>
+                <option value="under_maintenance">Under Maintenance</option>
+            </select>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="submit-btn">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>

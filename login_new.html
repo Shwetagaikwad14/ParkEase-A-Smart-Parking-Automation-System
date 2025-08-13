@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        html {
+            overflow: hidden;
+        }
+        body {
+            height: 100vh;
+            background-image: url("Images/back1.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .border {
+            margin: 0 auto;
+            margin-top: 4%;
+            padding: 20px;
+            max-width: 380px;
+            border-radius: 30px;
+        }
+        .container {
+            width: 390px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #433c4600;
+            font-weight: bolder;
+            backdrop-filter: blur(50px);
+            border: 3.4px solid rgb(74, 73, 73);
+            border-radius: 35px;
+        }
+        span {
+            color: rgb(88, 86, 86);
+            font-size: 35px;
+        }
+        input[type="text"], input[type="password"], select {
+            width: 95%;
+            height: 40px;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-bottom: solid 2px #fbfcfd;
+            font-size: 18px;
+            background-color: #a7d4ea28;
+            border-radius: 18px;
+        }
+        input[type="submit"] {
+            width: 95%;
+            height: 50px;
+            border-radius: 40px;
+            border-color: white;
+            color: rgb(20, 19, 20);
+            font-size: 21px;
+            font-weight: bolder;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background: transparent;
+            border: 3px solid rgba(246, 249, 246, 0.931);
+            color: white;
+            transition: 0.4s ease-out;
+        }
+        ::placeholder {
+            color: rgba(12, 2, 2, 0.713);
+        }
+    </style>
+</head>
+<body>
+    <div class="border">
+        <div class="container">
+            <form id="loginForm" onsubmit="login(); return false;">
+                <center><span>L O G I N</span></center><br><br>
+                
+                <center><input type="text" id="uname" placeholder="Username" required></center><br>
+                <center><input type="password" id="password" placeholder="Password" required></center><br>
+
+                <!-- Role Selection -->
+                <center>
+                    <select id="role" required>
+                        <option value="">Select Role</option>
+                        <option value="admin">Admin</option>
+                        <option value="user">User</option>
+                    </select>
+                </center><br>
+
+                <div>
+                    <span style="font-size:21px; color: #fbfcf8f7;">Don't have an account?</span>
+                    <span><a href="Registration.html" style="color: white; font-size:21px;"> Register</a></span>
+                </div><br><br>
+                
+                <center><input type="submit" value="Sign In"></center>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function login() {
+            let role = document.getElementById("role").value;
+            if (role === "admin") {
+                window.location.href = "admin/index.html"; // Admin dashboard
+            } else if (role === "user") {
+                window.location.href = "user/index.html"; // User dashboard
+            } else {
+                alert("Please select a role.");
+            }
+        }
+    </script>
+</body>
+</html>

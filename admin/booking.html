@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booked Parking Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .actions {
+            display: flex;
+            gap: 10px;
+        }
+        .btn {
+            padding: 8px 12px;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .btn-approve {
+            background-color: #4CAF50;
+        }
+        .btn-modify {
+            background-color: #f0ad4e;
+        }
+        .btn-cancel {
+            background-color: #d9534f;
+        }
+        .notification {
+            background-color: #ffebcc;
+            padding: 10px;
+            margin-top: 20px;
+            border-left: 5px solid #f0ad4e;
+        }
+        .check-in-status {
+            background-color: #e0f7fa;
+            padding: 10px;
+            margin-top: 20px;
+            border-left: 5px solid #00bcd4;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Booked Parking Management</h2>
+
+    <!-- Upcoming Bookings Table -->
+    <table>
+        <thead>
+            <tr>
+                <th>User Name</th>
+                <th>Contact Info</th>
+                <th>Booking Date & Time</th>
+                <th>Slot Number</th>
+                <th>Vehicle Details</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John Doe</td>
+                <td>john@example.com</td>
+                <td>2024-11-10, 10:00 AM</td>
+                <td>Slot 12</td>
+                <td>License Plate: ABC1234 (Car)</td>
+                <td class="actions">
+                    <button class="btn btn-approve">Approve</button>
+                    <button class="btn btn-modify">Modify</button>
+                    <button class="btn btn-cancel">Cancel</button>
+                </td>
+            </tr>
+            <!-- Additional booking rows can be added here -->
+        </tbody>
+    </table>
+
+    <!-- Notification Section -->
+    <div class="notification">
+        <strong>Notification:</strong> Notify users of booking updates, reminders for upcoming bookings, or any cancellations.
+    </div>
+
+    <!-- Check-In Status Section -->
+    <div class="check-in-status">
+        <strong>Check-In Status:</strong>
+        <p>Track real-time check-ins and check-outs. Highlight any overdue check-outs for vehicles that haven’t exited after their booking time.</p>
+    </div>
+</div>
+
+</body>
+</html>
